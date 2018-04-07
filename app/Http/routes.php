@@ -11,8 +11,13 @@
 |
 */
 
+Route::post('raymon', function(){
+ if($request->ajax()){
+  return Response::json(Request::all());
+ }
+});
 
-Route::post('raymon', 'raymonController@index');
+//Route::resource('raymon/{data}', 'raymonController@index');
 
 Route::get('/raymon', function(){
     return view('raymon');
