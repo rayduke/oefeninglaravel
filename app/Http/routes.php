@@ -12,8 +12,10 @@
 */
 
 
+Route::post('raymon', 'raymonController@index');
+
 Route::get('/raymon', function(){
-    echo "Test pagina";
+    return view('raymon');
 });
 
 Route::get('/', function () {
