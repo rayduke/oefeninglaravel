@@ -8,14 +8,19 @@ use oefeninglaravel\Http\Requests;
 
 class PagesController extends Controller
 {
-    function about(){
-        return view('/pages.about');
-    }
+
 
     function index(){
         return view('/index');
     }
     
+    function about(){
+        return view('/pages.about');
+    }
+    
+    function services(){
+        return view('/pages.services');
+    }
     
     
     
