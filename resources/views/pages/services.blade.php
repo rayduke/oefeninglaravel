@@ -8,7 +8,7 @@
                 @endforeach
             @endif
             </ul>
-        <p>This is the about page</p>
+        <p>This is the services page</p>
 @endsection
 
  
