@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace oefeninglaravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use oefeninglaravel\Http\Requests;
 
 class raymonController extends Controller
 {

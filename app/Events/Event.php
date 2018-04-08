@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace oefeninglaravel\Events;
 
 abstract class Event
 {
