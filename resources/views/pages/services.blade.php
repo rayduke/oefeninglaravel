@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>{{config('app.name', 'Oefening Laravel')}}</title>
+@extends('layouts.app')
+@section('content')
+        <h1>{{$title}}</h1>
+        <ul>
+        @if(count($services) > 0)
+            @foreach($services as $service)
+               <li>{{$service}}</li>
+            @endforeach
+        @endif
+        </ul>
+        <p>This is the about page</p>
+@endsection
 
-        <style>
-     
-        </style>
-    </head>
-    <body>
-        <h1>Services</h1>
-        <p>This is the services page</p>
-    </body>
-</html>
-
+ 

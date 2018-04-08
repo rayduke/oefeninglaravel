@@ -11,15 +11,22 @@ class PagesController extends Controller
 
 
     function index(){
-        return view('/index');
+        $title = 'Welcome to Laravel!';
+//        return view('/index', compact('title'));
+        return view('index')->with('title', $title);
     }
     
     function about(){
-        return view('/pages.about');
+        $title = 'About Us';
+        return view('pages.about')->with('title', $title);
     }
     
     function services(){
-        return view('/pages.services');
+//        $title = 'Services';
+        $data = array(
+            'title' => 'Services', 
+            'services' => ['mixing','mastering','recording','vocal editing']);
+        return view('pages.services')->with($data);
     }
     
     
