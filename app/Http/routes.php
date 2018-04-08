@@ -10,12 +10,28 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/', 'PagesController@index');
 
+Route::get('/about', 'PagesController@about');
+
+
+
+Route::post('raymon', function(){
+ if($request->ajax()){
+  return Response::json(Request::all());
+ }
+});
+
+//Route::resource('raymon/{data}', 'raymonController@index');
 
 Route::get('/raymon', function(){
-    echo "Test pagina";
+    return view('raymon');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
+
+

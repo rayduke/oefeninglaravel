@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace oefeninglaravel\Http\Controllers\Auth;
 
-use App\User;
+use oefeninglaravel\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use oefeninglaravel\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
