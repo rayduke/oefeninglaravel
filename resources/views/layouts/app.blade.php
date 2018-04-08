@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>{{config('app.name', 'Oefening Laravel')}}</title>
-
+        <link rel=stylesheet href="{{asset('css/style.css')}}">
         <style>
      
         </style>
