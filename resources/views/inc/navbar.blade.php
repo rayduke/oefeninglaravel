@@ -15,6 +15,9 @@
             <a class="nav-link" href="/services">Services</a>
           </li>
           <li class="nav-item">
-
+            <a class="nav-link" href="/posts">Posts</a>
+          </li>
+          <li class="nav-item">
+        </ul>    
       </div>
     </nav>
