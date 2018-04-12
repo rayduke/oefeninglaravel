@@ -18,7 +18,7 @@ class PostController extends Controller
 //        $posts = Post::all(); 
 //        return Post::where('title', 'Post Two')->get();
 //        $posts = DB::select('SELECT * FROM posts);
-//          $posts = Post::orderBy('title', 'asc')->take(1)->get();
+//        $posts = Post::orderBy('title', 'asc')->take(1)->get();
         
         $posts = Post::orderBy('created_at', 'desc')->get();
 //        $posts = Post::orderBy('title', 'asc')->paginate(1);
