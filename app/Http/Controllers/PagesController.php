@@ -29,7 +29,11 @@ class PagesController extends Controller
         return view('pages.services')->with($data);
     }
     
-    
+    function todo(){
+        $title = 'Todo Lijst';
+        return view('pages.todo')->with('title', $title);
+        
+    }
     
     
 }
