@@ -18,7 +18,7 @@ class PostController extends Controller
 //        $posts = Post::all(); 
 //        return Post::where('title', 'Post Two')->get();
 //        $posts = DB::select('SELECT * FROM posts);
-//          $posts = Post::orderBy('title', 'asc')->take(1)->get();
+//        $posts = Post::orderBy('title', 'asc')->take(1)->get();
         
         $posts = Post::orderBy('created_at', 'desc')->get();
 //        $posts = Post::orderBy('title', 'asc')->paginate(1);
@@ -77,7 +77,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.edit')->with('post',$post);
     }
 
     /**
@@ -89,7 +90,17 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+           'title' => 'required',
+            'body' => 'required'
+        ]);
+        
+        //store post
+        $post = Post::find($id);
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+        return redirect('/posts')->with('Succes', 'Post Created');
     }
 
     /**
