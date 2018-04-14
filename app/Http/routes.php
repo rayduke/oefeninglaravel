@@ -23,3 +23,7 @@ Route::get('/todo', 'pagesController@todo');
 Route::resource('/posts', 'PostController');
 
 //=================================================//
+
+//---------------kleding controllers------------------//
+Route::get('/dameskleding', 'KledingController@dameskleding');
+
